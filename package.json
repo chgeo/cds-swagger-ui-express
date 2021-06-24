@@ -1,6 +1,6 @@
 {
   "name": "cds-swagger-ui-express",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Swagger UI for CAP Services",
   "main": "index.js",
   "scripts": {
