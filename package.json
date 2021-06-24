@@ -1,0 +1,15 @@
+{
+  "name": "cds-swagger-ui-express",
+  "version": "1.0.0",
+  "description": "Swagger UI for CAP Services",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": ["cap", "cds", "openapi", "swagger"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "swagger-ui-express": "^4.1.6",
+    "@sap/cds-dk":"^4.3"
+  }
+}
