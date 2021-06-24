@@ -16,4 +16,6 @@ cds.on ('bootstrap', app => app.use(cds_swagger()) )
 module.exports = cds.server
 ```
 
+The Swagger UI is then served on `/$api-docs/<service-path`, like http://localhost:4004/$api-docs/browse/
+
 Note: If you call [`cds.serve`](https://cap.cloud.sap/docs/node.js/cds-serve#cds-serve) on your own, make sure to have this code executed _before_, as it relies on the [`serving` events](https://cap.cloud.sap/docs/node.js/cds-server#cdson--serving-service).
