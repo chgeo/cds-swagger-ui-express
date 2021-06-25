@@ -4,12 +4,21 @@
   "description": "Swagger UI for CAP Services",
   "main": "index.js",
   "scripts": {
+    "test": "jest"
   },
-  "keywords": ["cap", "cds", "openapi", "swagger"],
+  "keywords": [
+    "cap",
+    "cds",
+    "openapi",
+    "swagger"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "swagger-ui-express": "^4.1.6",
-    "@sap/cds-dk":"^4.3"
+    "@sap/cds-dk": "^4.2",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "jest": "^26"
   }
 }
