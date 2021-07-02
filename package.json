@@ -15,8 +15,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@sap/cds-dk": "^4.2",
-    "swagger-ui-express": "^4.1.6"
+    "@sap/cds-dk": "^4.1",
+    "express": "^4",
+    "swagger-ui-express": "^4"
   },
   "devDependencies": {
     "jest": "^26"
