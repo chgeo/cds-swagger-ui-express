@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "description": "Swagger UI for CAP Services",
   "main": "index.js",
-  "scripts": {
-    "test": "jest"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chgeo/cds-swagger-ui-express"
   },
   "keywords": [
     "cap",
@@ -13,8 +14,17 @@
     "openapi",
     "swagger"
   ],
-  "author": "",
+  "author": {
+    "name": "Christian Georgi"
+  },
   "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=12"
+  },
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
     "@sap/cds-dk": "^4.1",
     "swagger-ui-express": "^4"
@@ -23,11 +33,16 @@
     "@sap/cds": ">=5",
     "express": ">=4"
   },
-  "private": false,
-  "engines": {
-    "node": ">=12"
-  },
   "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "chai-subset": "^1.6.0",
     "jest": "^26"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
