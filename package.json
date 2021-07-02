@@ -9,6 +9,7 @@
   "keywords": [
     "cap",
     "cds",
+    "express",
     "openapi",
     "swagger"
   ],
@@ -16,8 +17,15 @@
   "license": "MIT",
   "dependencies": {
     "@sap/cds-dk": "^4.1",
-    "express": "^4",
     "swagger-ui-express": "^4"
+  },
+  "peerDependencies": {
+    "@sap/cds": ">=5",
+    "express": ">=4"
+  },
+  "private": false,
+  "engines": {
+    "node": ">=12"
   },
   "devDependencies": {
     "jest": "^26"
