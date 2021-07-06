@@ -3,7 +3,7 @@
 An express middleware to serve OpenAPI definitions for [CAP](https://cap.cloud.sap) services in Swagger UI.
 Builds on top of [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express).
 
-![Preview](assets/cds-swagger-ui.png)
+![Preview](https://raw.githubusercontent.com/chgeo/cds-swagger-ui-express/main/assets/cds-swagger-ui.png)
 
 ## Installation
 

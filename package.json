@@ -23,7 +23,6 @@
     "node": ">=12"
   },
   "files": [
-    "assets/",
     "index.js"
   ],
   "dependencies": {
