@@ -18,11 +18,12 @@ Have this in your [`server.js`](https://cap.cloud.sap/docs/node.js/cds-server#cu
 
 ```js
 const cds = require ('@sap/cds')
-const cds_swagger = require ('cds-swagger-ui-express')
-
-cds.on ('bootstrap', app => app.use(cds_swagger()) )
-
 module.exports = cds.server
+
+if (process.env.NODE_ENV !== 'production') {
+  const cds_swagger = require ('cds-swagger-ui-express')
+  cds.on ('bootstrap', app => app.use (cds_swagger()) )
+}
 ```
 
 Swagger UI is then served on `/$api-docs/<service-path>`, like http://localhost:4004/$api-docs/browse/
