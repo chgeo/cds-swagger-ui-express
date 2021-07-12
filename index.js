@@ -1,4 +1,4 @@
-const cds = _require ('@sap/cds-dk', orPolyfillCompileOpenAPI)
+const cds = require ('@sap/cds-dk')
 const swaggerUi = require('swagger-ui-express')
 const express = require('express')
 
@@ -40,34 +40,6 @@ function addLinkToIndexHtml(service, apiPath) {
 
 function isOData(service) {
   return Object.keys(service._adapters) .find (a => a.startsWith ('odata'))
-}
-
-function _require(id, _else) {
-  try {
-    return require (id)
-  } catch (e) {
-    return _else()
-  }
-}
-
-// polyfill for @sap/cds-dk < 4.3
-function orPolyfillCompileOpenAPI() {
-  const cds = require ('@sap/cds')
-  const get_compile = Reflect.getOwnPropertyDescriptor(cds,'compile').get
-
-  // extending cds to lazy-load additional submodules provided by cds-dk
-  return Object.defineProperties (cds, {
-    compile: {enumerable:true, get:()=> {
-      // lazy-extending cds.compile.to only when cds.compile getter is invoked
-      // otherwise we might cause cds.env being invoked too early.
-      const compile = get_compile.call(cds)
-      Object.defineProperties (compile.to, {
-        openapi: {enumerable:true, get:()=> require('@sap/cds-dk/lib/compile/openapi')}
-      })
-      return compile
-    }},
-  })
-
 }
 
 /* eslint no-console:off */
