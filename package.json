@@ -1,6 +1,6 @@
 {
   "name": "cds-swagger-ui-express",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Swagger UI for CAP Services",
   "main": "index.js",
   "repository": {
@@ -23,6 +23,7 @@
     "node": ">=12"
   },
   "files": [
+    "CHANGELOG.md",
     "index.js"
   ],
   "dependencies": {
