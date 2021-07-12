@@ -2,8 +2,10 @@ const cds = require ('@sap/cds-dk')
 const swaggerUi = require('swagger-ui-express')
 const express = require('express')
 
-module.exports = (options={basePath:'/$api-docs'}) => {
+module.exports = (options={}) => {
+  options = Object.assign({ basePath:'/$api-docs' }, options)
   const router = express.Router()
+
   cds.on ('serving', service => {
     if (!isOData (service))  return
     const apiPath = options.basePath+service.path

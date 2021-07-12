@@ -12,6 +12,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 - Requires `@sap/cds-dk` 4.3.0, no more polyfill for older versions
 
+### Fixed
+
+- Options can be provided partially
 
 ## Version 0.1.1 - 2021-07-06
 
