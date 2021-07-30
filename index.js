@@ -10,7 +10,6 @@ module.exports = (options={}) => {
     if (!isOData (service))  return
     const apiPath = options.basePath+service.path
     const mount = apiPath.replace('$','[\\$]')
-    console.log ('[cds] - serving Swagger UI for ', {service: service.name, at: apiPath})
     router.use(mount, (req, _, next) => {
       req.swaggerDoc = toOpenApiDoc(service, options)
       next()
