@@ -1,6 +1,7 @@
 const cds = require ('@sap/cds-dk')
 const swaggerUi = require('swagger-ui-express')
 const express = require('express')
+const LOG = cds.log('swagger')
 
 module.exports = (options={}) => {
   options = Object.assign({ basePath:'/$api-docs' }, options)
@@ -10,6 +11,7 @@ module.exports = (options={}) => {
     if (!isOData (service))  return
     const apiPath = options.basePath+service.path
     const mount = apiPath.replace('$','[\\$]')
+    LOG._debug && LOG.debug ('serving Swagger UI for ', {service: service.name, at: apiPath})
     router.use(mount, (req, _, next) => {
       req.swaggerDoc = toOpenApiDoc(service, options)
       next()

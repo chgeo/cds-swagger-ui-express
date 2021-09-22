@@ -7,13 +7,12 @@ describe('with options', ()=>{
   afterAll(() =>{ delete process.env.TEST_OPTIONS })
 
   test('Main HTML', async()=>{
-    const { status } = await GET `/test-base/browse`
-    expect (status) .equal (200)
+    const { data } = await GET `/test-base/browse`
+    expect (data) .match (/swagger/i)
   })
 
   test('Diagram', async()=>{
-    const { status, data } = await GET `/test-base/browse/swagger-ui-init.js`
-    expect (status) .equal (200)
+    const { data } = await GET `/test-base/browse/swagger-ui-init.js`
     expect (data) .not.to.contain('yuml')
   })
 
