@@ -1,6 +1,6 @@
 {
   "name": "cds-swagger-ui-express",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Swagger UI for CAP Services",
   "main": "index.js",
   "repository": {
@@ -43,9 +43,10 @@
     "jest": "^27"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --silent"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "testTimeout": 10000
   }
 }

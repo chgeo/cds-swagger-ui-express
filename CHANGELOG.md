@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## Version 0.3.0 - 2021-09-22
+
+### Changed
+
+- The `serving Swagger UI...` log lines are not longer sent to console by default to avoid clutter in the default output.  They can be enabled with `DEBUG=swagger` set as environment variable.
+
 ## Version 0.2.0 - 2021-07-12
 
 ### Changed
