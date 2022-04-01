@@ -36,7 +36,7 @@ function toOpenApiDoc(service, options={}) {
 function addLinkToIndexHtml(service, apiPath) {
   const provider = (entity) => {
     if (entity)  return // avoid link on entity level, looks too messy
-    return { href:apiPath, name:'Open API', title:'Show in Swagger UI' }
+    return { href:apiPath, name:'Open API Preview', title:'Show in Swagger UI' }
   }
   service.$linkProviders ? service.$linkProviders.push(provider) : service.$linkProviders = [provider]
 }
