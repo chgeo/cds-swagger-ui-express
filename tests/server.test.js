@@ -17,6 +17,7 @@ describe('Swagger UI', ()=>{
   })
   test('preview link in index.html', async()=>{
     const { data } = await GET `/`
+    expect (data) .match (/Open API Preview/i)
     expect (data) .match (/Show in Swagger UI/i)
   })
 

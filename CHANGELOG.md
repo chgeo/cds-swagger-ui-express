@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## Version 0.4.0 - 2022-04-01
+
+### Changed
+
+- The _Preview_ text on index page has been added to accomodate the change in `@sap/cds-dk` 4.9.0 that removes that text suffix.
+- Require `@sap/cds-dk@^4.9.0`
+
 ## Version 0.3.0 - 2021-09-22
 
 ### Changed
