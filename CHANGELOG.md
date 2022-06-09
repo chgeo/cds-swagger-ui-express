@@ -8,7 +8,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## Version 0.5.0 - tbd
 
-### Changed
+### Added
+
+- Option `apiPath` to configure a root URL path for the services, which is useful if behind a reverse proxy.
 
 ## Version 0.4.0 - 2022-04-01
 
