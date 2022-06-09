@@ -1,6 +1,7 @@
 const cds = require('@sap/cds-dk')
 const swaggerUi = require('swagger-ui-express')
 const express = require('express')
+const { join } = require('path')
 const LOG = cds.log('swagger')
 
 module.exports = (options = {}) => {
@@ -26,7 +27,7 @@ function toOpenApiDoc (service, options = {}) {
   if (!cache[service.name]) {
     cache[service.name] = cds.compile.to.openapi(service.model, {
       service: service.name,
-      'openapi:url': options.apiPath + service.path,
+      'openapi:url': join('/', options.apiPath, service.path),
       'openapi:diagram': ('diagram' in options ? options.diagram : true)
     })
   }
