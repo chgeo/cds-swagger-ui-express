@@ -34,6 +34,7 @@ Call `cds_swagger ({...})` with the following object:
 ```jsonc
 {
   "basePath": "/$api-docs", // the root path to mount the middleware on
+  "apiPath": "", // the root path for the services (useful if behind a reverse proxy)
   "diagram": "true" // whether to render the YUML diagram
 }
 ```

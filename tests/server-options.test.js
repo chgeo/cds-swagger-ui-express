@@ -1,4 +1,4 @@
-process.env.TEST_OPTIONS = JSON.stringify({basePath:'/test-base', diagram:false})
+process.env.TEST_OPTIONS = JSON.stringify({basePath:'/test-base', apiPath: '/root', diagram:false})
 
 const cds = require('@sap/cds/lib')
 const { GET, expect } = cds.test.in(__dirname, 'app').run('serve', 'all')
