@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## Version 0.5.0 - tbd
+
+### Changed
+
 ## Version 0.4.0 - 2022-04-01
 
 ### Changed
