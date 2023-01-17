@@ -35,7 +35,7 @@
     "express": ">=4"
   },
   "devDependencies": {
-    "@sap/cds": "^5.9.0",
+    "@sap/cds": "^6.4.1",
     "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
     "chai-subset": "^1.6.0",
