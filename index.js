@@ -17,7 +17,6 @@ module.exports = (options={}, swaggerUiOptions={}) => {
   const router = express.Router()
 
   cds.on('serving', service => {
-    if (!isOData(service)) return
     const apiPath = options.basePath + service.path
     const mount = apiPath.replace('$', '[\\$]')
     LOG._debug && LOG.debug('serving Swagger UI for ', { service: service.name, at: apiPath })
@@ -50,10 +49,6 @@ function addLinkToIndexHtml (service, apiPath) {
     return { href: apiPath, name: 'Open API Preview', title: 'Show in Swagger UI' }
   }
   service.$linkProviders ? service.$linkProviders.push(provider) : service.$linkProviders = [provider]
-}
-
-function isOData (service) {
-  return Object.keys(service._adapters).find(a => a.startsWith('odata'))
 }
 
 /**
