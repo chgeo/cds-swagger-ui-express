@@ -4,7 +4,15 @@ const express = require('express')
 const { join } = require('path')
 const LOG = cds.log('swagger')
 
-module.exports = (options = {}) => {
+
+/**
+ * Creates express middleware to serve CDS services in the Swagger UI
+ *
+ * @param {CdsSwaggerOptions} options - options for cds-swagger-ui itself
+ * @param {swaggerUi.SwaggerUiOptions} swaggerUiOptions - options passed to swagger-ui-express
+ * @returns {express.RequestHandler} - an express middleware
+ */
+module.exports = (options={}, swaggerUiOptions={}) => {
   options = Object.assign({ basePath: '/$api-docs', apiPath: '' }, options)
   const router = express.Router()
 
@@ -13,10 +21,12 @@ module.exports = (options = {}) => {
     const apiPath = options.basePath + service.path
     const mount = apiPath.replace('$', '[\\$]')
     LOG._debug && LOG.debug('serving Swagger UI for ', { service: service.name, at: apiPath })
+
+    const uiOptions = Object.assign({ customSiteTitle: `${service.name} - Swagger UI` }, swaggerUiOptions)
     router.use(mount, (req, _, next) => {
       req.swaggerDoc = toOpenApiDoc(service, options)
       next()
-    }, swaggerUi.serve, swaggerUi.setup())
+    }, swaggerUi.serve, swaggerUi.setup(null, uiOptions))
     addLinkToIndexHtml(service, apiPath)
   })
   return router
@@ -46,4 +56,9 @@ function isOData (service) {
   return Object.keys(service._adapters).find(a => a.startsWith('odata'))
 }
 
-/* eslint no-console:off */
+/**
+ * @typedef {Object} CdsSwaggerOptions
+ * @property {string} basePath - the root path to mount the middleware on
+ * @property {string} apiPath - the root path for the services (useful if behind a reverse proxy)
+ * @property {boolean} diagram - whether to render the YUML diagram
+ */

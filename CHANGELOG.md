@@ -6,6 +6,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## Version 0.6.0 - tbd
+
+### Added
+
+- Way to pass swagger (UI) options. See [README.md](README.md).
+- JSDoc type definitions for options.
+
+### Changed
+
+- The default site title is now _\<Service Name\> - Swagger UI_ (instead of just _Swagger UI_)
+
 ## Version 0.5.0 - 2022-06-09
 
 ### Added
