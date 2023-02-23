@@ -25,7 +25,8 @@ module.exports = (options={}, swaggerUiOptions={}) => {
     router.use(mount, (req, _, next) => {
       req.swaggerDoc = toOpenApiDoc(service, options)
       next()
-    }, swaggerUi.serve, swaggerUi.setup(null, uiOptions))
+    }, swaggerUi.serveFiles(), swaggerUi.setup(null, uiOptions))
+
     addLinkToIndexHtml(service, apiPath)
   })
   return router

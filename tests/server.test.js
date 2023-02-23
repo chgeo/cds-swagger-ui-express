@@ -21,4 +21,12 @@ describe('Swagger UI', ()=>{
     expect (data) .match (/Show in Swagger UI/i)
   })
 
+  test('multiple services', async()=>{
+    let data  = (await GET `/$api-docs/browse/swagger-ui-init.js`).data
+    expect (data ) .to.be.a('string').that.contains('CatalogService')
+
+    data  = (await GET `/$api-docs/admin/swagger-ui-init.js`).data
+    expect (data ) .to.be.a('string').that.contains('AdminService')
+  })
+
 })
