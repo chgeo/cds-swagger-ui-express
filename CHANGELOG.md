@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Changed
 
 - The default site title is now _\<Service Name\> - Swagger UI_ (instead of just _Swagger UI_)
+- REST services are now available as well in the Swagger UI.  Previously, only OData services were allowed.  This was to avoid potential issues as the underlying OpenAPI transformation uses OData as intermediate protocol.  So, as long as we don't see issues, allow REST services as well.
 
 ## Version 0.5.0 - 2022-06-09
 

@@ -1,25 +1,15 @@
-namespace bookshop;
-using { Country, managed } from '@sap/cds/common';
+using { bookshop } from './db/schema';
 
 service CatalogService @(path:'/browse') {
 
-  entity Books {
-    key ID : Integer;
-    title  : localized String;
-    author : Association to Authors;
-    stock  : Integer;
-  }
+  @readonly entity Books as projection on bookshop.Books;
+}
 
-  entity Authors {
-    key ID : Integer;
-    name   : String;
-    books  : Association to many Books on books.author = $self;
-  }
+@protocol: 'rest'
+service AdminService {
 
-  entity Orders : managed {
-    key ID  : UUID;
-    book    : Association to Books;
-    country : Country;
-    amount  : Integer;
-  }
+  entity Books as projection on bookshop.Books;
+  entity Authors as projection on bookshop.Authors;
+  entity Orders as projection on bookshop.Orders;
+
 }
