@@ -60,3 +60,7 @@ For questions to specific properties, contact the maintainers of [swagger-ui-exp
 ### Notes
 
 If you call [`cds.serve`](https://cap.cloud.sap/docs/node.js/cds-serve#cds-serve) on your own in your `server.js`, make sure to install this middleware _before_, as it relies on CDS' [`serving` events](https://cap.cloud.sap/docs/node.js/cds-server#cdson--serving-service).
+
+### Known Issues
+
+An error `sh: 1: cds: not found` can occur if `cds-swagger-ui-express` is installed in `devDependencies`.  As a workaround, move it to `dependencies`.  See this [issue](https://github.com/chgeo/cds-swagger-ui-express/issues/8) for more.
