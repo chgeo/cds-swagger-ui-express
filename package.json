@@ -28,7 +28,7 @@
   ],
   "dependencies": {
     "@sap/cds-dk": ">=4.9",
-    "swagger-ui-express": "^4.6.2"
+    "swagger-ui-express": "^5.0.0"
   },
   "peerDependencies": {
     "@sap/cds": ">=5",
