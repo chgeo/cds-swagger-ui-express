@@ -37,6 +37,7 @@ function toOpenApiDoc (service, options = {}) {
   if (!cache[service.name]) {
     cache[service.name] = cds.compile.to.openapi(service.model, {
       service: service.name,
+      'odata-version': options.odataVersion,
       'openapi:url': join('/', options.apiPath, service.path),
       'openapi:diagram': ('diagram' in options ? options.diagram : true)
     })
