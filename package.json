@@ -27,11 +27,11 @@
     "index.js"
   ],
   "dependencies": {
-    "@sap/cds-dk": ">=4.9",
+    "@sap/cds-dk": ">=7",
     "swagger-ui-express": "^5.0.0"
   },
   "peerDependencies": {
-    "@sap/cds": ">=5",
+    "@sap/cds": ">=7",
     "express": ">=4"
   },
   "devDependencies": {
