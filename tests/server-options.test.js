@@ -1,7 +1,7 @@
-process.env.TEST_OPTIONS    = JSON.stringify({basePath:'/test-base', apiPath: '/root', diagram:false})
+process.env.TEST_OPTIONS    = JSON.stringify({basePath:'/test-base', apiPath: '/root', diagram:false, odataVersion:'4.0'})
 process.env.TEST_OPTIONS_UI = JSON.stringify({customSiteTitle: 'My Custom Title'})
 
-const cds = require('@sap/cds/lib')
+const cds = require('@sap/cds')
 const { GET, expect } = cds.test.in(__dirname, 'app').run('serve', 'all')
 
 describe('with options', ()=>{
