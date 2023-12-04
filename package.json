@@ -20,7 +20,7 @@
   "license": "MIT",
   "private": false,
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "files": [
     "CHANGELOG.md",

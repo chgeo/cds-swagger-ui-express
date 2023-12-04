@@ -13,7 +13,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Require `@sap/cds` ^7
 - Require `@sap/cds-dk` ^7
 - Use Swagger UI 5
-- Drop Node 14 support
+- Drop Node 14 and 16 support. Minimum Node version is now 18.
 
 ### Added
 
