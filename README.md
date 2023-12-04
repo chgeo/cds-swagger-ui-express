@@ -35,7 +35,8 @@ Call `cds_swagger ({...})` with the following object as first parameter:
 {
   "basePath": "/$api-docs", // the root path to mount the middleware on
   "apiPath": "", // the root path for the services (useful if behind a reverse proxy)
-  "diagram": true // whether to render the YUML diagram
+  "diagram": true, // whether to render the YUML diagram
+  "odataVersion": "4.0" // specify the OData Version used by cds-dk (>=7.2.0) to compile the OpenAPI specs. When undefined, this defaults to 4.01
 }
 ```
 

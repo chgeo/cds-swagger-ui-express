@@ -37,6 +37,7 @@ function toOpenApiDoc (service, options = {}) {
   if (!cache[service.name]) {
     cache[service.name] = cds.compile.to.openapi(service.model, {
       service: service.name,
+      'odata-version': options.odataVersion,
       'openapi:url': join('/', options.apiPath, service.path),
       'openapi:diagram': ('diagram' in options ? options.diagram : true),
       to: 'openapi' // workaround needed for cds-dk 7.4
@@ -58,4 +59,5 @@ function addLinkToIndexHtml (service, apiPath) {
  * @property {string} basePath - the root path to mount the middleware on
  * @property {string} apiPath - the root path for the services (useful if behind a reverse proxy)
  * @property {boolean} diagram - whether to render the YUML diagram
+ * @property {string} odataVersion - the OData version used to compile the OpenAPI specs. Defaults to 4.01
  */

@@ -15,6 +15,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Use Swagger UI 5
 - Drop Node 14 support
 
+### Added
+
+- New option `odataVersion` to specify the OData version used to compile the OpenAPI specs
+
 ### Fixed
 
 - Works with `@sap/cds` 7.4 again
