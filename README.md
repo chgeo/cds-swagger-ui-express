@@ -64,4 +64,4 @@ If you call [`cds.serve`](https://cap.cloud.sap/docs/node.js/cds-serve#cds-serve
 
 ### Known Issues
 
-An error `sh: 1: cds: not found` can occur if `cds-swagger-ui-express` is installed in `devDependencies`.  As a workaround, move it to `dependencies`.  See this [issue](https://github.com/chgeo/cds-swagger-ui-express/issues/8) for more.
+None at this time.
