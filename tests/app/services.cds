@@ -6,6 +6,7 @@ service CatalogService @(path:'/browse') {
 }
 
 @protocol: 'rest'
+@path: '/admin'
 service AdminService {
 
   entity Books as projection on bookshop.Books;

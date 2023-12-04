@@ -39,7 +39,8 @@ function toOpenApiDoc (service, options = {}) {
       service: service.name,
       'odata-version': options.odataVersion,
       'openapi:url': join('/', options.apiPath, service.path),
-      'openapi:diagram': ('diagram' in options ? options.diagram : true)
+      'openapi:diagram': ('diagram' in options ? options.diagram : true),
+      to: 'openapi' // workaround needed for cds-dk 7.4
     })
   }
   return cache[service.name]

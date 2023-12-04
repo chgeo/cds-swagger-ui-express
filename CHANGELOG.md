@@ -6,6 +6,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## Version 0.7.0 - 2023-12-07
+
+### Changed
+
+- Require `@sap/cds` ^7
+- Require `@sap/cds-dk` ^7
+- Use Swagger UI 5
+- Drop Node 14 support
+
+### Fixed
+
+- Works with `@sap/cds` 7.4 again
+
 ## Version 0.6.0 - 2023-02-27
 
 ### Added
