@@ -2,9 +2,10 @@ process.env.TEST_OPTIONS    = JSON.stringify({basePath:'/test-base', apiPath: '/
 process.env.TEST_OPTIONS_UI = JSON.stringify({customSiteTitle: 'My Custom Title'})
 
 const cds = require('@sap/cds')
-const { GET, expect } = cds.test.in(__dirname, 'app').run('serve', 'all')
 
 describe('with options', ()=>{
+  const { GET, expect } = cds.test.in(__dirname, 'app').run('serve', 'all')
+
   afterAll(() =>{ delete process.env.TEST_OPTIONS })
 
   test('Main HTML', async()=>{

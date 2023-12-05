@@ -1,7 +1,4 @@
 const cds = require ('@sap/cds')
-const cds_swagger = require('../..')
-
-module.exports = cds.server
 
 let options = {}
 if (process.env.TEST_OPTIONS) {
@@ -12,4 +9,8 @@ if (process.env.TEST_OPTIONS_UI) {
   uiOptions = JSON.parse(process.env.TEST_OPTIONS_UI)
 }
 
-cds.on ('bootstrap', app => app.use(cds_swagger(options, uiOptions)))
+if (!process.env.TEST_AS_PLUGIN) {
+  // do not load index.js if running as plugin
+  const cds_swagger = require('../..')
+  cds.on ('bootstrap', app => app.use(cds_swagger(options, uiOptions)))
+}

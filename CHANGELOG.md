@@ -8,7 +8,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## Version 0.8.0 - tbd
 
-### Changed
+### Added
+
+- Auto-registration mode: the middleware registers itself when loaded as a CAP plugin
+- Declarative configuration through `package.json` / `cds-rc.json`
+- Programmatic registration is still possible, but disables auto mode then
 
 ## Version 0.7.0 - 2023-12-04
 
