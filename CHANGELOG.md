@@ -8,7 +8,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## Version 0.8.0 - tbd
 
+### Added
+
+- Auto-registration mode: the middleware registers itself when loaded as a CAP plugin
+- Declarative configuration through `package.json` / `cds-rc.json`
+- Programmatic registration is still possible, but disables auto mode then
+
 ### Changed
+
+- Make dependency to `@sap/cds-dk` optional.  If running with the `cds` executable during development, the dependency is fulfilled anyways. Only when running as part of a deployed app with `cds-serve`, then such a dependency is needed.
 
 ## Version 0.7.0 - 2023-12-04
 
