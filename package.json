@@ -29,15 +29,21 @@
     "index.js"
   ],
   "dependencies": {
-    "@sap/cds-dk": ">=7",
     "swagger-ui-express": "^5"
   },
   "peerDependencies": {
     "@sap/cds": ">=7",
+    "@sap/cds-dk": ">=7",
     "express": ">=4"
+  },
+  "peerDependenciesMeta": {
+    "@sap/cds-dk": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@sap/cds": "^7",
+    "@sap/cds-dk": "^7",
     "axios": "^1",
     "chai": "^4",
     "chai-as-promised": "^7",
