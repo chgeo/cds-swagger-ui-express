@@ -3,19 +3,17 @@
   "version": "0.8.0",
   "description": "Swagger UI for CAP Services",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chgeo/cds-swagger-ui-express"
-  },
+  "repository": "github:chgeo/cds-swagger-ui-express",
   "keywords": [
     "cap",
     "cds",
     "express",
     "openapi",
-    "swagger"
+    "swagger",
+    "cap-plugin"
   ],
   "author": {
-    "name": "Christian Georgi"
+    "name": "chgeo"
   },
   "license": "MIT",
   "private": false,
