@@ -21,6 +21,11 @@ describe.only('Swagger UI', ()=>{
     expect (data) .match (/Open API Preview/i)
     expect (data) .match (/Show in Swagger UI/i)
   })
+  test('Admin endpoint is protected', async()=>{
+    expect(GET `/admin/`).to.be.rejected
+    const { data } = await GET(`/admin/`, { auth: { username: 'alice' }})
+    expect (JSON.stringify(data)) .match (/Books/)
+  })
 
   test('multiple services', async()=>{
     let data  = (await GET `/$api-docs/browse/swagger-ui-init.js`).data
