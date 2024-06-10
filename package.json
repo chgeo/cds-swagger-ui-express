@@ -44,7 +44,7 @@
     "@sap/cds-dk": "^7",
     "axios": "^1",
     "chai": "^4",
-    "chai-as-promised": "^7",
+    "chai-as-promised": "^8",
     "chai-subset": "^1",
     "express": "^4",
     "jest": "^29"
