@@ -1,6 +1,6 @@
 {
   "name": "cds-swagger-ui-express",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Swagger UI for CAP Services",
   "main": "index.js",
   "repository": "github:chgeo/cds-swagger-ui-express",
@@ -27,21 +27,15 @@
     "index.js"
   ],
   "dependencies": {
+    "@cap-js/openapi": "^1.0.4",
     "swagger-ui-express": "^5"
   },
   "peerDependencies": {
     "@sap/cds": ">=7",
-    "@sap/cds-dk": ">=7",
     "express": ">=4"
   },
-  "peerDependenciesMeta": {
-    "@sap/cds-dk": {
-      "optional": true
-    }
-  },
   "devDependencies": {
-    "@sap/cds": "^7",
-    "@sap/cds-dk": "^7",
+    "@sap/cds": "^8",
     "axios": "^1",
     "chai": "^4",
     "chai-as-promised": "^7",
