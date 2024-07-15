@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## Version 0.9.0 - 2024-07-15
+
+### Changed
+
+- Use `@cap-js/openapi` instead of `@sap/cds-dk`, leading to lighter dependencies
+
 ## Version 0.8.0 - 2024-01-18
 
 ### Added
