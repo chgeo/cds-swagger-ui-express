@@ -20,7 +20,7 @@ After starting the app with `cds watch` or so, Swagger UI is served at `/$api-do
 
 ## Configuration
 
-You can set the most prominent options in `package.json` or `cds-rc.json`, as in other CAP apps:
+You can set the most prominent options in `package.json` or `.cds-rc.json`, as in other CAP apps:
 ```jsonc
 "cds": {
   "swagger": {
