@@ -14,7 +14,7 @@ describe.only('Swagger UI', ()=>{
   })
   test('Diagram', async()=>{
     const { data } = await GET `/$api-docs/browse/swagger-ui-init.js`
-    expect (data) .to.contain('yuml')
+    expect (data) .to.contain('swaggerUrl')
   })
   test('preview link in index.html', async()=>{
     const { data } = await GET `/`
@@ -28,11 +28,13 @@ describe.only('Swagger UI', ()=>{
   })
 
   test('multiple services', async()=>{
-    let data  = (await GET `/$api-docs/browse/swagger-ui-init.js`).data
-    expect (data ) .to.be.a('string').that.contains('CatalogService')
+    let data  = (await GET `/$api-docs/browse/openapi.json`).data
+    expect (data ) .to.be.a('object').to.have.property('openapi')
+    expect (data ) .to.be.a('object').to.have.property('x-sap-shortText', 'Service for namespace CatalogService')
 
-    data  = (await GET `/$api-docs/admin/swagger-ui-init.js`).data
-    expect (data ) .to.be.a('string').that.contains('AdminService')
+    data  = (await GET `/$api-docs/admin/openapi.json`).data
+    expect (data ) .to.be.a('object').to.have.property('openapi')
+    expect (data ) .to.be.a('object').to.have.property('x-sap-shortText', 'Service for namespace AdminService')
   })
 
 })
