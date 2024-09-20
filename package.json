@@ -35,6 +35,7 @@
     "express": ">=4"
   },
   "devDependencies": {
+    "@cap-js/sqlite": "^1",
     "@sap/cds": "^8",
     "axios": "^1",
     "chai": "^4",
