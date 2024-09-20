@@ -31,10 +31,12 @@ describe.only('Swagger UI', ()=>{
     let data  = (await GET `/$api-docs/browse/openapi.json`).data
     expect (data ) .to.be.a('object').to.have.property('openapi')
     expect (data ) .to.be.a('object').to.have.property('x-sap-shortText', 'Service for namespace CatalogService')
+    expect (JSON.stringify(data)) .to.contain('yuml')
 
     data  = (await GET `/$api-docs/admin/openapi.json`).data
     expect (data ) .to.be.a('object').to.have.property('openapi')
     expect (data ) .to.be.a('object').to.have.property('x-sap-shortText', 'Service for namespace AdminService')
+    expect (JSON.stringify(data)) .to.contain('yuml')
   })
 
 })
