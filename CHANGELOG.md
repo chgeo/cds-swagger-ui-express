@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## Version 0.10.0 - tbd
+
+### Added
+
+- The OpenAPI spec is no available for download on `.../openapi.json` and linked in the UI.
+
 ## Version 0.9.0 - 2024-07-15
 
 ### Changed

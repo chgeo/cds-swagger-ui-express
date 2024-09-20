@@ -14,8 +14,8 @@ describe('with options', ()=>{
   })
 
   test('Diagram', async()=>{
-    const { data } = await GET `/test-base/browse/swagger-ui-init.js`
-    expect (data) .not.to.contain('yuml')
+    const { data } = await GET `/test-base/browse/openapi.json`
+    expect (JSON.stringify(data)) .not.to.contain('yuml')
   })
 
   test('Swagger UI options', async()=>{
