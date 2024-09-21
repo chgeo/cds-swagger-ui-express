@@ -5,4 +5,4 @@ updates:
   directory: /
   versioning-strategy: increase-if-necessary
   schedule:
-    interval: daily
+    interval: weekly
