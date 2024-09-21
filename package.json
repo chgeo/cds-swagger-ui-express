@@ -35,6 +35,7 @@
     "express": ">=4"
   },
   "devDependencies": {
+    "@cap-js/cds-types": "^0",
     "@cap-js/sqlite": "^1",
     "@sap/cds": "^8",
     "axios": "^1",
