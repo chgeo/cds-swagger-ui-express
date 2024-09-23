@@ -12,6 +12,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 - The OpenAPI spec is no available for download on `.../openapi.json` and linked in the UI.
 
+### Changed
+
+- The default value for option `apiPath` is now `/`, allowing more flexible control over the root path where the CDS services are served.  Formerly, it was not possible to set root path _relative_  to the current host, like `abc.com/1234-appid/$api-docs/...`, `abc.com/5678-appid/$api-docs/...`.
+
 ## Version 0.9.0 - 2024-07-15
 
 ### Changed
