@@ -90,7 +90,7 @@
     },
     "swagger": {
       "basePath": "/$api-docs",
-      "apiPath": "",
+      "apiPath": "/",
       "diagram": true,
       "odataVersion": ""
     }
