@@ -5,6 +5,12 @@ service CatalogService @(path:'/browse') {
   @readonly entity Books as projection on bookshop.Books;
 }
 
+annotate CatalogService with @(
+  title : 'Catalog Service',
+  Core.Description: 'Browse book catalog',
+  Core.LongDescription: 'Allows browsing of the book catalog'
+);
+
 @protocol: 'rest'
 @path: '/admin'
 @requires: 'authenticated-user'
@@ -15,6 +21,12 @@ service AdminService {
   entity Orders as projection on bookshop.Orders;
 
 }
+
+annotate AdminService with @(
+  title : 'Admin Service',
+  Core.Description: 'Manage books, authors',
+  Core.LongDescription: 'Allows managing books, authors, and more'
+);
 
 /**
  * Auth info for swagger

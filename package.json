@@ -1,6 +1,6 @@
 {
   "name": "cds-swagger-ui-express",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Swagger UI for CAP Services",
   "main": "index.js",
   "repository": "github:chgeo/cds-swagger-ui-express",
