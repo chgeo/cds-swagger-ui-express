@@ -6,6 +6,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## Version 0.11.0 - tbd
+
+### Changed
+
+- Default texts have changed and are now more configurable through
+  - `@title` for service title
+  - `@Core.Description` for service short text
+  - `@Core.LongDescription` for service description
+
 ## Version 0.10.0 - 2024-10-02
 
 ### Added
