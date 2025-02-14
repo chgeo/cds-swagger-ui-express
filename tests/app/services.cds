@@ -35,12 +35,21 @@ annotate AdminService with @(
 annotate AdminService with @(
   Authorization: {
     Authorizations: [
-      { $Type : 'Auth.Http', Name : 'Basic', Scheme : 'basic' },
-      { $Type : 'Auth.Http', Name : 'JWT',   Scheme : 'bearer', BearerFormat : 'JWT' },
+      { $Type : 'Authorization.Http', Name : 'Basic', Scheme : 'basic' },
+      { $Type : 'Authorization.Http', Name : 'JWT',   Scheme : 'bearer', BearerFormat : 'JWT' },
+      { $Type : 'Authorization.OAuth2ClientCredentials', Name : 'OAuth2',
+        Scopes     : [{
+          Scope      : 'some_scope',
+          Description: 'Scope description'
+        }],
+        RefreshUrl : 'https://some.host/oauth/token/refresh',
+        TokenUrl   : 'https://some.host/oauth/token'
+      },
     ],
     SecuritySchemes: [
       { Authorization : 'Basic' },
       { Authorization : 'JWT', RequiredScopes : [] },
+      { Authorization : 'OAuth2' },
     ]
   }
 );
