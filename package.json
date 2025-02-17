@@ -39,7 +39,7 @@
     "@cap-js/sqlite": "^1",
     "@sap/cds": "^8",
     "axios": "^1",
-    "chai": "^4",
+    "chai": "^5",
     "chai-as-promised": "^7",
     "chai-subset": "^1",
     "express": "^4",
