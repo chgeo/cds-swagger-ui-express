@@ -1,6 +1,7 @@
 const cds = require ('@sap/cds')
 
-let options = {}
+let options = { basePath: "/$api-docs-custom" }
+
 if (process.env.TEST_OPTIONS) {
   options = JSON.parse(process.env.TEST_OPTIONS)
 }

@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
+- Options from `package.json` now get used as defaults even if the middleware is added programmatically.  You can now call it w/o options but have them in `package.json` only, or mix them, with the programmatic options taking precedence.
 - Default texts have changed and are now more configurable through
   - `@title` for service title
   - `@Core.Description` for service short text

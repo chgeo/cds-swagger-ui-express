@@ -1,6 +1,6 @@
 const cds = require('@sap/cds')
 
-describe.only('Swagger UI', ()=>{
+describe('Swagger UI', ()=>{
 
   const { GET, expect } = cds.test.in(__dirname, 'app').run('serve', 'all')
 
@@ -9,11 +9,11 @@ describe.only('Swagger UI', ()=>{
     expect (data) .match (/Books/)
   })
   test('Main HTML', async()=>{
-    const { data } = await GET `/$api-docs/browse`
+    const { data } = await GET `/$api-docs-custom/browse`
     expect (data) .match (/swagger/i)
   })
   test('Diagram', async()=>{
-    const { data } = await GET `/$api-docs/browse/swagger-ui-init.js`
+    const { data } = await GET `/$api-docs-custom/browse/swagger-ui-init.js`
     expect (data) .to.contain('swaggerUrl')
   })
   test('preview link in index.html', async()=>{
@@ -28,31 +28,17 @@ describe.only('Swagger UI', ()=>{
   })
 
   test('multiple services', async()=>{
-    let data  = (await GET `/$api-docs/browse/openapi.json`).data
+    let data  = (await GET `/$api-docs-custom/browse/openapi.json`).data
     expect (data) .to.be.a('object').to.have.property('openapi')
     expect (data) .to.be.a('object').to.have.property('x-sap-shortText')
     expect (data['x-sap-shortText'] ).to.match(/.*book.*catalog/i)
     expect (JSON.stringify(data)) .to.contain('yuml')
 
-    data  = (await GET `/$api-docs/admin/openapi.json`).data
+    data  = (await GET `/$api-docs-custom/admin/openapi.json`).data
     expect (data) .to.be.a('object').to.have.property('openapi')
     expect (data) .to.be.a('object').to.have.property('x-sap-shortText')
     expect (data['x-sap-shortText'] ).to.match(/manage/i)
     expect (JSON.stringify(data)) .to.contain('yuml')
-  })
-
-})
-
-describe('Swagger UI as plugin', ()=>{
-
-  beforeAll(()=> process.env.TEST_AS_PLUGIN = true)
-  afterAll(()=> delete process.env.TEST_AS_PLUGIN)
-
-  const { GET, expect } = cds.test.in(__dirname, 'app').run('serve', 'all')
-
-  test('Main HTML', async()=>{
-    const { data } = await GET `/$api-docs-plugin/browse`
-    expect (data) .match (/swagger/i)
   })
 
 })

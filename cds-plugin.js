@@ -14,6 +14,6 @@ cds.on ('bootstrap', app => {
 
   DEBUG?.('Plugin with options', swagger)
   const cds_swagger = require('./lib/middleware')
-  app.use(cds_swagger(swagger))
+  app.use(cds_swagger())
 
 })
