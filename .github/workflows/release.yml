@@ -18,16 +18,16 @@ jobs:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: 22
         registry-url: https://registry.npmjs.org/
     - run: npm ci
     - run: npm test
     - name: get-version
       id: package-version
-      uses: martinbeentjes/npm-get-version-action@v1.2.3
+      uses: martinbeentjes/npm-get-version-action@v1.3.1
     - name: Parse changelog
       id: parse-changelog
-      uses: schwma/parse-changelog-action@v1.0.0
+      uses: schwma/parse-changelog-action@v1
       with:
         version: '${{ steps.package-version.outputs.current-version }}'
     - name: Create a GitHub release
