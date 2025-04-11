@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
   - `@title` for service title
   - `@Core.Description` for service short text
   - `@Core.LongDescription` for service description
+- This plugin is no longer tested with Node 18, which has reached end of life.
 
 ## Version 0.10.0 - 2024-10-02
 
