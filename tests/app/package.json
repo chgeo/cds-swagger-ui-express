@@ -2,11 +2,19 @@
   "name": "test-app",
   "version": "1.0.0",
   "devDependencies": {
-    "cds-swagger-ui-express": "file:../.."
+    "cds-swagger-ui-express": "file:../..",
+    "concurrently": "^9.1.2"
   },
   "cds": {
     "swagger": {
       "basePath": "/$api-docs-plugin"
     }
-   }
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "start:approuter": "cds_swagger_proxyPathPrefix=/proxy destinations='[{\"name\": \"srv-api\", \"url\": \"http://localhost:4004\"}]' concurrently -c cyan,yellow,green --names approuter,cap -p '[{name}]' 'npm start' 'PORT=5001 npm --prefix approuter run start'"
+  },
+  "workspaces": [
+    "approuter"
+  ]
 }

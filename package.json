@@ -41,7 +41,7 @@
     "jest": "^29"
   },
   "scripts": {
-    "test": "jest --silent"
+    "test": "npm i --prefix tests/app && jest --silent"
   },
   "jest": {
     "testEnvironment": "node",
@@ -60,9 +60,10 @@
                   "description": "The root path to mount the middleware on",
                   "default": "/$api-docs"
                 },
-                "apiPath": {
+                "proxyPathPrefix": {
                   "type": "string",
-                  "description": "The root path for the services (useful if behind a reverse proxy)"
+                  "description": "A path prefix that clients expect when calling the Swagger UI. To be used in reverse proxy scenarios.",
+                  "default": ""
                 },
                 "diagram": {
                   "type": "boolean",
@@ -85,9 +86,9 @@
     },
     "swagger": {
       "basePath": "/$api-docs",
-      "apiPath": "/",
       "diagram": true,
-      "odataVersion": ""
+      "odataVersion": "",
+      "proxyPathPrefix": ""
     }
   }
 }
