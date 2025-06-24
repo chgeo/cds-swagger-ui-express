@@ -1,0 +1,11 @@
+{
+  "welcomeFile": "/proxy/",
+  "authenticationMethod": "none",
+  "routes": [
+    {
+      "source": "^/proxy/(.*)",
+      "target": "/$1",
+      "destination": "srv-api"
+    }
+  ]
+}
