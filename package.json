@@ -21,7 +21,6 @@
     "node": ">=18"
   },
   "files": [
-    "CHANGELOG.md",
     "lib/",
     "cds-plugin.js",
     "index.js"
