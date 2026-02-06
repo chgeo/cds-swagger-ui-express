@@ -17,6 +17,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
   - `@Core.LongDescription` for service description
 - This plugin is no longer tested with Node 18, which has reached end of life.
 
+### Fixed
+
+- Compatibility with express 5, as `@sap/cds` >= 9.7.0 supports it now.
+
 ## Version 0.10.0 - 2024-10-02
 
 ### Added
