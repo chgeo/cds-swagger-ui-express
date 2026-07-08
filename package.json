@@ -18,7 +18,7 @@
   "license": "MIT",
   "private": false,
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "files": [
     "lib/",
@@ -30,21 +30,16 @@
     "swagger-ui-express": "^5"
   },
   "peerDependencies": {
-    "@sap/cds": ">=7",
+    "@sap/cds": ">=9",
     "express": ">=4"
   },
   "devDependencies": {
-    "@cap-js/cds-test": ">=0",
+    "@cap-js/cds-test": "^1",
     "@cap-js/cds-types": ">=0",
-    "@cap-js/sqlite": ">=1",
-    "jest": "^30"
+    "@cap-js/sqlite": ">=2"
   },
   "scripts": {
-    "test": "jest --silent"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "testTimeout": 10000
+    "test": "cds-test"
   },
   "cds": {
     "schema": {
@@ -88,5 +83,8 @@
       "diagram": true,
       "odataVersion": ""
     }
-  }
+  },
+  "workspaces": [
+    "tests/app"
+  ]
 }
