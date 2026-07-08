@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [24, 22, 20]
+        node-version: [26, 24, 22]
         express-version: [5, 4]
 
     steps:
